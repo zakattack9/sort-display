@@ -42,4 +42,7 @@
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array Methods</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object Methods</a></li>
   <li><a href="https://github.com/junior-devleague/deeper-objects">Deeper Objects</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">Creating Elements with Javascript</a></li>
+  <li><a href="https://www.w3schools.com/jsref/met_node_appendchild.asp">Append Child</a></li>
+  <li><a href="https://www.w3schools.com/jsref/prop_node_textcontent.asp">Text Content</a></li>
 </ul>
