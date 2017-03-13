@@ -25,14 +25,16 @@
 <p>Stretch Goal</p>
 <ol>
   <li>Add photos to the object and display them in the list</li>
-  <li>Create a new list of array object(s) and display them</li>
+  <li>Create a new list of array object(s) and display them in a separate container. *hint you can reuse functions. ^.^</li>
   <li>
-    Add css to the new list and change the look. Using either the following css selectors and properties or your own style.
+    <p>Add css to the lists and change the look. Using either the following css selectors and properties or your own style.</p>
     <ul>
       <li>:hover</li>
       <li>border-radius</li>
       <li>background</li>
     </ul>
+
+    <p>*create a new css file in your css folder named styles.css, don't forget to link it!</p>
   </li>
 </ol>
 <p>Have fun!</p>
