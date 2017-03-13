@@ -124,7 +124,7 @@ function showAll(data) {
 
     var listEl = document.getElementById('peeps');
     var eachListEl = document.createElement('li');
-    //BEING EXTRA: Adding name to an h1 and desc to a p *STRETCH GOAL*
+    //BEING EXTRA: Adding name to an heading and desc to a p *STRETCH GOAL*
 
     var nameEl = document.createElement('h3');
     eachListEl.appendChild(nameEl);
