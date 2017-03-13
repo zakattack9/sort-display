@@ -50,38 +50,7 @@ var people = [
 *
 */
 
-function removeData(data) {
-  // console.log('data',data);
-  var newItems;
-  var newArray = data.filter(function (obj) {
-    for (var keys in obj){
-      if (obj[keys] === 'Rick and Morty'){
-        newItems = obj;
-        if(typeof newItems.name === 'string'){
-          // console.log('obj', obj);
-          return obj;
-        }
-      }
-    }
-  });
-  //returns the new filtered array. Or you can push
-  return newArray;
 
-//alternative return
-  // return data.filter(function (obj) {
-  //   for (var keys in obj){
-  //     // console.log('obj[keys]',obj[keys]);
-  //     if (keys === 'name' && typeof obj[keys] === 'string'){
-  //       return obj;
-  //     }
-  //   }
-  // });
-}
-
-// console.log('removeData(people)', removeData(people));
-  people = removeData(people);
-
-// console.log('people',people);
 
 
 /*
@@ -107,45 +76,3 @@ function removeData(data) {
 * @display the list of people and title of the show to the DOM
 *
 */
-
-function showAll(data) {
-  var myPeoplesEl = document.getElementById('mypeoples');
-  var titleEl = document.createElement('h1');
-  myPeoplesEl.appendChild(titleEl);
-
-  var title = data[0].show;
-  var titleTextNode = document.createTextNode(title);
-  titleEl.appendChild(titleTextNode);
-
-  data.forEach(function (obj) {
-    // console.log('arry',obj.name);
-    var name = obj.name;
-    var desc = obj.description;
-
-    var listEl = document.getElementById('peeps');
-    var eachListEl = document.createElement('li');
-    //BEING EXTRA: Adding name to an h1 and desc to a p *STRETCH GOAL*
-
-    var nameEl = document.createElement('h3');
-    eachListEl.appendChild(nameEl);
-
-    var nameTextNode = document.createTextNode( name + ': ');
-    nameEl.appendChild(nameTextNode);
-    // eachListEl.appendChild(nameTextNode);
-
-    var descEl = document.createElement('p');
-    eachListEl.appendChild(descEl);
-
-    var descTextNode = document.createTextNode(desc);
-    descEl.appendChild(descTextNode);
-    // eachListEl.appendChild(descTextNode);
-
-    listEl.appendChild(eachListEl);
-
-
-  });
-
-}
-
-
-showAll(people);
