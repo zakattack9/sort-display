@@ -50,6 +50,27 @@ var people = [
 *
 */
 
+function removeData(data){
+  var newArray = [];
+  for(var i = 0; i <= data.length; i++){
+    for(var key in data[i]){
+      if(data[i][key] === "Rick and Morty"){
+        //console.log(data[i]);
+        newArray.push(data[i]);
+      }
+    }
+  }
+  //I cheated here to remove the characters from "Rick and Morty"
+  data.splice(0, 4);
+  data.pop();
+  
+  //console.log(newArray);
+  data = newArray;
+  showAll(data); //allows new array to be accessed from seperate function
+  return data;
+
+}
+console.log(removeData(people));
 
 
 
@@ -76,3 +97,46 @@ var people = [
 * @display the list of people and title of the show to the DOM
 *
 */
+
+function showAll(data){
+  var titleOfShow = "Rick and Morty";
+  console.log(titleOfShow);
+  
+  var nameOne = data[0].name;
+  var descripOne = data[0].description;
+
+  var nameTwo = data[1].name;
+  var descripTwo = data[1].description;
+
+  var nameThree = data[2].name;
+  var descripThree = data[2].description;
+ 
+  var nameFour = data[3].name;
+  var descripFour = data[3].description;
+
+  var nameFive = data[4].name;
+  var descripFive = data[4].description;
+
+  var node = document.createElement("H1");
+  node.appendChild(titleOfShow);
+  document.getElementById("mypeoples").appendChild(node);
+
+
+  var nodeTwo = document.createElement("LI");
+  nodeTwo.appendChild(nameOne + ": " + descripOne);
+  document.getElementById("peeps").appendChild(nodeTwo);
+
+  nodeTwo.appendChild(nameTwo + ": " + descripTwo);
+  document.getElementById("peeps").appendChild(nodeTwo);
+
+  nodeTwo.appendChild(nameThree + ": " + descripThree);
+  document.getElementById("peeps").appendChild(nodeTwo);
+
+  nodeTwo.appendChild(nameFour + ": " + descripFour);
+  document.getElementById("peeps").appendChild(nodeTwo);
+
+  nodeTwo.appendChild(nameFive + ": " + descripFive);
+  document.getElementById("peeps").appendChild(nodeTwo);
+
+}
+showAll(data);
